@@ -1,0 +1,35 @@
+@import 'styles/_vars';
+
+.site-header {
+  background-color: $accent;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    
+    @media (min-width: 768px) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 156px;
+    }
+  }
+
+  .location {
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  .location-btn {
+    background-color: $white;
+    border-radius: 2px;
+    border: none;
+    color: $accent;
+    cursor: pointer;
+    padding: 0 16px;
+    height: 44px;
+    width: max-content
+  }
+}

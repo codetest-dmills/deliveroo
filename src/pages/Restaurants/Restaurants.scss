@@ -1,0 +1,49 @@
+@import "styles/_vars";
+
+.restaurants {
+  &.container {
+    @media (min-width: 768px) {
+      padding-top: 40px;
+    }
+  }
+
+  .restaurants-count {
+    color: $gray;
+    display: none;
+    margin-bottom: 40px;
+  
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  
+  .restaurants-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    justify-items: center;
+  
+    .card {
+      max-width: min(350px, 100%);
+      text-decoration: none;
+      color: $black;
+  
+      img {
+        width: 100%;
+      }
+  
+      .tags {
+        color: $gray;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+        gap: 1ch;
+  
+        .sep {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
